@@ -1,0 +1,16 @@
+{
+  "extends": "./packages/tsconfig/base.json",
+  "compilerOptions": { "noEmit": true },
+  "include": [],
+  "references": [
+    { "path": "apps/web" }, { "path": "apps/api" },
+    { "path": "packages/shared-types" }, { "path": "packages/config" },
+    { "path": "packages/memory" }, { "path": "packages/agents" },
+    { "path": "packages/mcp" }, { "path": "packages/preview" },
+    { "path": "packages/voice" }, { "path": "packages/platform" },
+    { "path": "packages/database" }, { "path": "packages/skills" },
+    { "path": "packages/experience" }, { "path": "packages/learning" },
+    { "path": "packages/export" }, { "path": "packages/maintenance" },
+    { "path": "packages/ast" }, { "path": "packages/ui" }
+  ]
+}

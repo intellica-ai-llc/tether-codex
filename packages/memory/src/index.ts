@@ -1,0 +1,6 @@
+export { TetherMemoryStorage } from './storage.js'
+export { AutoDreamConsolidator } from './consolidator.js'
+export { TetherMemoryQueryEngine } from './query-engine.js'
+export { TetherHandoffPackager } from './handoff.js'
+export { validateMemoryEntry, createDecision, createPattern, createPitfall } from './schema.js'
+export type { MemoryQueryOptions } from './schema.js'

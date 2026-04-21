@@ -1,0 +1,12 @@
+name: Auto-Fix
+on: { issues: { types: [opened, labeled] }, schedule: [{ cron: '0 */6 * * *' }] }
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    if: github.event.label.name == 'bug' || github.event_name == 'schedule'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v4; with: { node-version: '20', cache: 'pnpm' }
+      - run: pnpm install && node packages/agents/dist/cli/index.js @BUG "Scan for errors and auto-fix"
+        env: { OPENAI_API_KEY: '${{ secrets.OPENAI_API_KEY }}', ANTHROPIC_API_KEY: '${{ secrets.ANTHROPIC_API_KEY }}' }

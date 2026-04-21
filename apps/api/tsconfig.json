@@ -1,0 +1,1 @@
+{ "extends": "@tether/tsconfig/base.json", "compilerOptions": { "outDir": "./dist", "types": ["@cloudflare/workers-types"] }, "include": ["src/**/*"] }

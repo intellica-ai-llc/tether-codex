@@ -1,0 +1,9 @@
+{
+  "name": "@tether/maintenance",
+  "version": "3.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": { "build": "tsc", "start": "node dist/daemon.js" },
+  "dependencies": { "@tether/memory": "workspace:*", "@tether/shared-types": "workspace:*", "node-cron": "^3.0.0" },
+  "devDependencies": { "@tether/tsconfig": "workspace:*", "@types/node": "^20.0.0", "@types/node-cron": "^3.0.0", "typescript": "^5.0.0" }
+}

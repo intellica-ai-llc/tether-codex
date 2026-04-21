@@ -1,0 +1,12 @@
+name: Maintenance Scan
+on: { schedule: [{ cron: '0 0 * * *' }], workflow_dispatch: }
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v4; with: { node-version: '20', cache: 'pnpm' }
+      - run: pnpm install && pnpm outdated || true && pnpm audit || true
+      - run: node packages/agents/dist/cli/index.js @MNT "Run maintenance scan and report"
+        env: { OPENAI_API_KEY: '${{ secrets.OPENAI_API_KEY }}' }

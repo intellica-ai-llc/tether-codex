@@ -1,0 +1,5 @@
+{
+  "zero_cost_until_revenue": true,
+  "free_tier_limits": { "api_requests_per_day": 100000, "database_mb": 500, "storage_gb": 10, "queue_commands_per_day": 10000 },
+  "current_usage": { "api_requests": 0, "database_bytes": 0, "storage_bytes": 0, "queue_commands": 0 }
+}

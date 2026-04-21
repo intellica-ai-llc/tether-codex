@@ -1,74 +1,27 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyc
-*.pyo
-*.pyd
-*.so
-.Python
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-pythonenv*
-
-# Backend
-backend/.env
-backend/.env.local
-backend/.env.*.local
-backend/__pycache__/
-backend/.tether/
-
-# Frontend
-frontend/node_modules/
-frontend/dist/
-frontend/dist-ssr/
-frontend/*.local
-frontend/.env
-frontend/.env.local
-frontend/.env.*.local
-
-# IDE
+node_modules/
+.pnpm-store/
+dist/
+build/
+.next/
+out/
+.env
+.env.local
+.env.*.local
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 .DS_Store
-
-# Logs
-logs/
+Thumbs.db
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-
-# Testing
-coverage/
-.nyc_output/
-.pytest_cache/
-.pytest_cache
-
-# Temp files
-/tmp/
-*.tmp
-*.temp
-*.bak
-
-# OS
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# Secrets
+.tether/memory/learnings.jsonl
+.tether/maintenance/auto-fix-log.jsonl
+.tether/debugging/incidents/
+.tether/support/tickets/
 *.pem
 *.key
-*.crt
-*.p12
-service-account-key.json
-
-# Tether Codex specific
-.tether/
-tether_repos/
+*.cert
+.turbo

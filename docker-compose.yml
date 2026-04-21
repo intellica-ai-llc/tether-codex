@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  web:
+    build: { context: ., dockerfile: docker/Dockerfile.web }
+    ports: ["3000:3000"]
+    volumes: ["./.tether:/app/.tether"]
+  api:
+    build: { context: ., dockerfile: docker/Dockerfile.api }
+    ports: ["8787:8787"]
+    volumes: ["./.tether:/app/.tether"]

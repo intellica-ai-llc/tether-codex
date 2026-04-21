@@ -1,0 +1,15 @@
+{
+  "name": "@tether/shared-types",
+  "version": "3.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./api": "./dist/api.js",
+    "./database": "./dist/database.js",
+    "./memory": "./dist/memory.js",
+    "./agent": "./dist/agent.js"
+  },
+  "scripts": { "build": "tsc", "dev": "tsc --watch" },
+  "devDependencies": { "@tether/tsconfig": "workspace:*", "typescript": "^5.0.0" }
+}

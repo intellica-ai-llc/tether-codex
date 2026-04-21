@@ -1,0 +1,9 @@
+{
+  "name": "@tether/preview",
+  "version": "3.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": { "build": "tsc" },
+  "dependencies": { "@webcontainer/api": "^1.0.0" },
+  "devDependencies": { "@tether/tsconfig": "workspace:*", "typescript": "^5.0.0" }
+}

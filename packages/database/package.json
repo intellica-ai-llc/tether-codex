@@ -1,0 +1,9 @@
+{
+  "name": "@tether/database",
+  "version": "3.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": { "build": "tsc", "migrate": "drizzle-kit push", "generate": "drizzle-kit generate" },
+  "dependencies": { "@tether/shared-types": "workspace:*", "@tether/config": "workspace:*", "drizzle-orm": "^0.30.0", "postgres": "^3.0.0" },
+  "devDependencies": { "@tether/tsconfig": "workspace:*", "drizzle-kit": "^0.20.0", "typescript": "^5.0.0" }
+}

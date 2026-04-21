@@ -1,0 +1,10 @@
+{
+  "gates": {
+    "requirements": { "status": "pending", "validated_at": null, "issues": [] },
+    "architecture": { "status": "pending", "validated_at": null, "issues": [] },
+    "implementation": { "status": "pending", "validated_at": null, "issues": [] },
+    "deployment": { "status": "pending", "validated_at": null, "issues": [] },
+    "maintenance": { "status": "pending", "validated_at": null, "issues": [] }
+  },
+  "production_ready": false
+}

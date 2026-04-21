@@ -1,0 +1,9 @@
+{
+  "name": "@tether/export",
+  "version": "3.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": { "build": "tsc" },
+  "dependencies": { "@tether/memory": "workspace:*", "archiver": "^6.0.0" },
+  "devDependencies": { "@tether/tsconfig": "workspace:*", "@types/archiver": "^6.0.0", "@types/node": "^20.0.0", "typescript": "^5.0.0" }
+}

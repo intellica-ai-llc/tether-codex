@@ -1,0 +1,9 @@
+{
+  "name": "@tether/ast",
+  "version": "3.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": { "build": "tsc" },
+  "dependencies": { "tree-sitter": "^0.21.0", "tree-sitter-typescript": "^0.21.0", "tree-sitter-javascript": "^0.21.0" },
+  "devDependencies": { "@tether/tsconfig": "workspace:*", "@types/node": "^20.0.0", "typescript": "^5.0.0" }
+}

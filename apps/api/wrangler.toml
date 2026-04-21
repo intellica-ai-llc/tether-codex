@@ -1,0 +1,5 @@
+name = "tether-api"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+[env.production]
+vars = { SUPABASE_URL = "", SUPABASE_ANON_KEY = "" }
