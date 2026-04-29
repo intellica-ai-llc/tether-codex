@@ -1,4 +1,4 @@
-import { AgentPersona } from './types'
+import { AgentPersona } from './types.js'
 export const MM: AgentPersona = {
   id: 'mm', name: 'Master Marketer', role: 'Positioning & UX Direction', phase: 'discovery',
   triggers: ['marketing', 'positioning', 'brand', 'audience', 'conversion'],

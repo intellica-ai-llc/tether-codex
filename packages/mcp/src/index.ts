@@ -1,4 +1,4 @@
-export { TetherMCPClient } from './client'
-export type { MCPServerConfig, MCPTool } from './client'
-export { TetherMCPServer } from './server'
-export type { MCPToolDefinition } from './server'
+export { TetherMCPClient } from './client/index.js'
+export type { MCPServerConfig, MCPTool } from './client/index.js'
+export { TetherMCPServer } from './server/index.js'
+export type { MCPToolDefinition } from './server/index.js'

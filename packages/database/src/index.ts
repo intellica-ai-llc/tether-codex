@@ -1,3 +1,3 @@
-export * from './schema'
-export { db } from './client'
-export { RLS_POLICIES } from './rls'
+export * from './schema.js'
+export { db } from './client.js'
+export { RLS_POLICIES } from './rls.js'

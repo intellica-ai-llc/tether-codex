@@ -1,4 +1,4 @@
-import { AgentPhase } from './index'
+import { AgentPhase } from './index.js'
 export interface AgentPersona { id: string; name: string; role: string; phase: AgentPhase; triggers: string[]; systemPrompt: string; outputPath: string; metrics: AgentMetricsConfig; signature: string[] }
 export interface AgentMetricsConfig { primary: string; primaryTarget: number; secondary: string; secondaryTarget: number }
 export interface OrchestratorContext { projectId: string; workspacePath: string; userMessage: string; userId: string }

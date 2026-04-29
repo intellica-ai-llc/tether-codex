@@ -1,9 +1,9 @@
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 import { logger } from 'hono/logger'
-import agent from './routes/agent'
-import memory from './routes/memory'
-import billing from './routes/billing'
+import agent from './routes/agent.js'
+import memory from './routes/memory.js'
+import billing from './routes/billing.js'
 
 const app = new Hono()
 app.use('*', logger())

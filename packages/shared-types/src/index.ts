@@ -57,7 +57,7 @@ export interface AgentMetrics {
   project_id?: string
 }
 
-export * from './api'
-export * from './database'
-export * from './memory'
-export * from './agent'
+export * from './api.js'
+export * from './database.js'
+export * from './memory.js'
+export * from './agent.js'

@@ -1,1 +1,1 @@
-export { MaintenanceDaemon } from './daemon'
+export { MaintenanceDaemon } from './daemon.js'

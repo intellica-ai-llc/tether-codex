@@ -1,4 +1,4 @@
-import { AgentPersona } from './types'
+import { AgentPersona } from './types.js'
 export const MNT: AgentPersona = {
   id: 'mnt', name: 'Maintenance Master', role: '24/7 Monitoring & Auto-Fixes', phase: 'maintenance',
   triggers: ['maintenance', 'monitor', 'health', 'patch', 'update'],

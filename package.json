@@ -2,8 +2,8 @@
   "name": "tether-codex",
   "version": "3.0.0",
   "private": true,
-  "description": "Tether Codex — Autonomous Software Organization with 13-Agent Council",
-  "workspaces": ["packages/*", "apps/*"],
+  "description": "Tether Codex v3 — Autonomous Software Organization with 8-Agent Council",
+  "workspaces": ["packages/*", "apps/*", "gateway"],
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
@@ -12,8 +12,9 @@
     "format": "biome format --write .",
     "agent": "node packages/agents/dist/cli/index.js",
     "dream": "node packages/agents/dist/cli/index.js dream",
-    "maintenance": "node packages/agents/dist/cli/index.js maintenance start",
-    "export": "node packages/agents/dist/cli/index.js export",
+    "skills": "node packages/skills/dist/cli/index.js",
+    "gateway": "node gateway/dist/runner.js",
+    "export": "node packages/export/dist/index.js",
     "status": "node packages/agents/dist/cli/index.js status",
     "migrate": "drizzle-kit push"
   },
@@ -21,7 +22,8 @@
     "@biomejs/biome": "^1.9.0",
     "turbo": "^2.0.0",
     "typescript": "^5.0.0",
-    "@types/node": "^20.0.0"
+    "@types/node": "^20.0.0",
+    "vitest": "^1.0.0"
   },
   "engines": { "node": ">=20.0.0", "pnpm": ">=9.0.0" },
   "packageManager": "pnpm@9.0.0"

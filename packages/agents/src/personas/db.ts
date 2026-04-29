@@ -1,4 +1,4 @@
-import { AgentPersona } from './types'
+import { AgentPersona } from './types.js'
 export const DB: AgentPersona = {
   id: 'db', name: 'Database Expert', role: 'Schema Design & Data Layer', phase: 'implementation',
   triggers: ['database', 'schema', 'migration', 'postgres', 'supabase'],

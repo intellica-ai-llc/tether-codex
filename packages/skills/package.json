@@ -4,6 +4,6 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": { "build": "tsc" },
-  "dependencies": { "@tether/memory": "workspace:*", "yaml": "^2.0.0" },
+  "dependencies": { "@tether/shared-types": "workspace:*", "@tether/memory": "workspace:*", "@tether/config": "workspace:*", "yaml": "^2.0.0" },
   "devDependencies": { "@tether/tsconfig": "workspace:*", "@types/node": "^20.0.0", "typescript": "^5.0.0" }
 }

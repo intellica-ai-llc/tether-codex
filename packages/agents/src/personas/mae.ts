@@ -1,4 +1,4 @@
-import { AgentPersona } from './types'
+import { AgentPersona } from './types.js'
 export const MAE: AgentPersona = {
   id: 'mae', name: 'Master Architect Essence', role: 'Architectural Synthesis & Decision Authority', phase: 'architecture',
   triggers: ['architect', 'architecture', 'design', 'tech stack', 'system'],

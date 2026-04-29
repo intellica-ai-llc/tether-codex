@@ -1,4 +1,4 @@
-import { ArchitecturalDecision, TetherMemoryEntry } from './index'
+import { ArchitecturalDecision, TetherMemoryEntry } from './index.js'
 export interface Project { id: string; user_id: string; name: string; description?: string; repo_url?: string; tech_stack: string[]; constraints: string[]; current_step: number; created_at: string; updated_at: string }
 export interface Document { id: string; project_id: string; doc_type: 'ARCHITECTURE' | 'IMPLEMENTATION_PLAN' | 'HANDOFF' | 'USER_FLOW'; content: string; version: number; generated_by: string; created_at: string }
 export interface AgentSession { id: string; project_id: string; messages: ChatMessage[]; created_at: string; expires_at: string }

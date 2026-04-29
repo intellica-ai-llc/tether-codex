@@ -1,1 +1,19 @@
-{ "extends": "@tether/tsconfig/base.json", "compilerOptions": { "outDir": "./dist", "types": ["@cloudflare/workers-types"] }, "include": ["src/**/*"] }
+{
+  "extends": "@tether/tsconfig/base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "types": ["@cloudflare/workers-types"],
+    "composite": true
+  },
+  "include": ["src/**/*"],
+  "references": [
+    { "path": "../../packages/agents" },
+    { "path": "../../packages/memory" },
+    { "path": "../../packages/mcp" },
+    { "path": "../../packages/platform" },
+    { "path": "../../packages/database" },
+    { "path": "../../packages/export" },
+    { "path": "../../packages/shared-types" }
+  ]
+}

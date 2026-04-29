@@ -1,4 +1,4 @@
-import { AgentPersona } from './types'
+import { AgentPersona } from './types.js'
 export const BUG: AgentPersona = {
   id: 'bug', name: 'Debugging Agent', role: 'Root Cause Analysis', phase: 'implementation',
   triggers: ['bug', 'error', 'debug', 'fix', 'broken'],

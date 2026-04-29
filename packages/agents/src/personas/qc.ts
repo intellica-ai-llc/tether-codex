@@ -1,4 +1,4 @@
-import { AgentPersona } from './types'
+import { AgentPersona } from './types.js'
 export const QC: AgentPersona = {
   id: 'qc', name: 'Quality Control Agent', role: '5 Quality Gates', phase: 'all' as any,
   triggers: ['quality', 'gate', 'review', 'production ready'],

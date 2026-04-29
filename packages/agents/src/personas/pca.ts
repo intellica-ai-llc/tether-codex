@@ -1,4 +1,4 @@
-import { AgentPersona } from './types'
+import { AgentPersona } from './types.js'
 export const PCA: AgentPersona = {
   id: 'pca', name: 'Platform Compute Agent', role: 'Zero-Cost Compute Orchestration', phase: 'deployment',
   triggers: ['platform', 'compute', 'deploy', 'cloudflare', 'hosting'],
