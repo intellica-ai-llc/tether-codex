@@ -13,15 +13,20 @@ export class SupabaseMemoryStorage {
 
   async append(entry: Omit<TetherMemoryEntry, 'ts'> & { ts?: string }): Promise<TetherMemoryEntry> {
     const fullEntry: TetherMemoryEntry = { ts: new Date().toISOString(), ...entry }
-    const { error } = await this.supabase.from('learnings').insert({
-      project_id: this.projectId, ...fullEntry
-    })
+    const data: any = { ...fullEntry }
+    if (this.projectId !== 'default') {
+      data.project_id = this.projectId
+    }
+    const { error } = await this.supabase.from('learnings').insert(data)
     if (error) throw new Error(`Failed to append learning: ${error.message}`)
     return fullEntry
   }
 
   async query(options: MemoryQueryOptions = {}): Promise<TetherMemoryEntry[]> {
-    let query = this.supabase.from('learnings').select('*').eq('project_id', this.projectId)
+    let query = this.supabase.from('learnings').select('*')
+    if (this.projectId !== 'default') {
+      query = query.eq('project_id', this.projectId)
+    }
     if (options.type) {
       const types = Array.isArray(options.type) ? options.type : [options.type]
       query = query.in('type', types)
@@ -40,10 +45,12 @@ export class SupabaseMemoryStorage {
   async getPatterns(minConfidence: 7): Promise<TetherMemoryEntry[]> { return this.query({ type: 'pattern', minConfidence, orderBy: 'confidence' }) }
   async getPitfalls(limit = 30): Promise<TetherMemoryEntry[]> { return this.query({ type: 'pitfall', orderBy: 'recency', limit }) }
   async searchByText(q: string, limit = 20): Promise<TetherMemoryEntry[]> {
-    const { data, error } = await this.supabase.from('learnings').select('*')
-      .eq('project_id', this.projectId)
-      .or(`key.ilike.%${q}%,insight.ilike.%${q}%`)
-      .limit(limit)
+    let query = this.supabase.from('learnings').select('*')
+    if (this.projectId !== 'default') {
+      query = query.eq('project_id', this.projectId)
+    }
+    query = query.or(`key.ilike.%${q}%,insight.ilike.%${q}%`).limit(limit)
+    const { data, error } = await query
     if (error) throw new Error(`Failed to search learnings: ${error.message}`)
     return (data || []).map(this.mapRow)
   }

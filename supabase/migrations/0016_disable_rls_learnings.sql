@@ -1,0 +1,1 @@
+ALTER TABLE public.learnings DISABLE ROW LEVEL SECURITY;
